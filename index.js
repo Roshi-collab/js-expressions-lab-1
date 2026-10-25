@@ -21,9 +21,6 @@ module.exports = {
     // avg_temperature_in_celsius
 };
 
-
-
- // Creating variables for the recorded temperatures
 const day1TempF = 32;
 const day2TempC = 25;
 const day3TempF = 70;
@@ -55,7 +52,7 @@ const day28TempC = 17;
 const day29TempF = 76;
 const day30TempC = 29;
 
-// Convert Fahrenheit temperatures to Celsius
+// 2. Convert Fahrenheit temperatures to Celsius
 const day1TempC = (day1TempF - 32) * 5 / 9;
 const day3TempC = (day3TempF - 32) * 5 / 9;
 const day5TempC = (day5TempF - 32) * 5 / 9;
@@ -72,7 +69,7 @@ const day25TempC = (day25TempF - 32) * 5 / 9;
 const day27TempC = (day27TempF - 32) * 5 / 9;
 const day29TempC = (day29TempF - 32) * 5 / 9;
 
-// Convert Celsius temperatures to Fahrenheit
+// 3. Convert Celsius temperatures to Fahrenheit
 const day2TempF = (day2TempC * 9 / 5) + 32;
 const day4TempF = (day4TempC * 9 / 5) + 32;
 const day6TempF = (day6TempC * 9 / 5) + 32;
@@ -89,7 +86,7 @@ const day26TempF = (day26TempC * 9 / 5) + 32;
 const day28TempF = (day28TempC * 9 / 5) + 32;
 const day30TempF = (day30TempC * 9 / 5) + 32;
 
-// Calculate total temperatures in Fahrenheit
+// 4. Calculate total temperatures in Fahrenheit
 const tot_temperature_in_fahrenheit =
     day1TempF + day2TempF + day3TempF + day4TempF +
     day5TempF + day6TempF + day7TempF + day8TempF +
@@ -100,7 +97,7 @@ const tot_temperature_in_fahrenheit =
     day25TempF + day26TempF + day27TempF + day28TempF +
     day29TempF + day30TempF;
 
-// Calculate total temperatures in Celsius
+// 5. Calculate total temperatures in Celsius
 const tot_temperature_in_celsius =
     day1TempC + day2TempC + day3TempC + day4TempC +
     day5TempC + day6TempC + day7TempC + day8TempC +
@@ -111,20 +108,26 @@ const tot_temperature_in_celsius =
     day25TempC + day26TempC + day27TempC + day28TempC +
     day29TempC + day30TempC;
 
-// Calculate average temperatures
+// 6. Calculate average temperatures
 const avg_temperature_in_fahrenheit =
     tot_temperature_in_fahrenheit / 30;
 
 const avg_temperature_in_celsius =
     tot_temperature_in_celsius / 30;
 
-// Display results for inspection
-console.log("Total temperature in Fahrenheit:", tot_temperature_in_fahrenheit);
-console.log("Total temperature in Celsius:", tot_temperature_in_celsius);
-console.log("Average temperature in Fahrenheit:", avg_temperature_in_fahrenheit);
-console.log("Average temperature in Celsius:", avg_temperature_in_celsius);
+// 7. Make variables available to the test file
+global.tot_temperature_in_fahrenheit = tot_temperature_in_fahrenheit;
+global.tot_temperature_in_celsius = tot_temperature_in_celsius;
+global.avg_temperature_in_fahrenheit = avg_temperature_in_fahrenheit;
+global.avg_temperature_in_celsius = avg_temperature_in_celsius;
 
-// Export variables for the tests
+// 8. Display results
+console.log("Total Fahrenheit:", tot_temperature_in_fahrenheit);
+console.log("Total Celsius:", tot_temperature_in_celsius);
+console.log("Average Fahrenheit:", avg_temperature_in_fahrenheit);
+console.log("Average Celsius:", avg_temperature_in_celsius);
+
+// 9. Export variables
 module.exports = {
     tot_temperature_in_fahrenheit,
     tot_temperature_in_celsius,
